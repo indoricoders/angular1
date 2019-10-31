@@ -1,0 +1,20 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div  *ngIf="hidedialogbox" class="showhide">
+
+  <ul   (click) = 'chatbot()'>
+
+    <li><img src="assets/images/bot.png" style="height:50px"/></li>
+    <li style="padding-left: 10px;
+    padding-top: 15px;"><h6>Hi AKshay!How may i help you?</h6></li>
+    <span style="padding-left: 10px;
+    padding-top: 8px;">...</span>
+  </ul>
+
+
+</div>
+
+<div  *ngIf="showchatbot" class="chatform" >
+  <message-list [messages]="messages"  ></message-list>
+  <message-form [message]="message" [messages]="messages" ></message-form>
+</div>
